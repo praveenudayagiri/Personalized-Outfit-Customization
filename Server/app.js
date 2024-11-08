@@ -28,7 +28,7 @@ app.use("/",requestRouter);
 app.use("/",productRouter);
 app.use("/",cartRouter);
 
-
+module.exports = app;
 connectDB()
 
 
