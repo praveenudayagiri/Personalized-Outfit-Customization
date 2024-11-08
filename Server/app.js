@@ -30,15 +30,7 @@ app.use("/",cartRouter);
 
 
 connectDB()
-.then(() =>{
-    console.log("Database connection established...");
-    app.listen(9000,()  => {
-        console.log("server is sucessfully listening on port 9000....");
-    });
-}) 
-.catch((err) => {
-    console.error("Database cannot be connected");
-});
+
 
 
 
