@@ -28,7 +28,7 @@ const Signup = () => {
       // Notify success
       setSuccess("User added Sucessfully");
       setError(''); // Reset any previous error
-      setTimeout(() => navigate("/"), 2000); // Redirect to login page after 2 seconds
+      navigate("/"); // Redirect to login page after 2 seconds
 
     } catch (error) {
       // Handle error and show message
