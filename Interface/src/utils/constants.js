@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:9000";
+export const BASE_URL = "https://personalized-outfit-customization-mdxt8tp9c.vercel.app/";
