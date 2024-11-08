@@ -6,7 +6,7 @@ const { userAuth } = require('./middleware/auth');
  const cors = require('cors');
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://personalized-outfit-customization-rc6u.vercel.app/",
     credentials: true,
 }));
 app.use(express.json());
