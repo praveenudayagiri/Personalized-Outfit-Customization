@@ -6,10 +6,7 @@ const cookieParser = require("cookie-parser");
 const { userAuth } = require('./middleware/auth');
  const cors = require('cors');
 
-app.use(cors({
-    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
-    credentials: true,
-}));
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -19,7 +16,10 @@ const requestRouter = require("./routes/requests");
 const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 
-
+app.use(cors({
+    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
+    credentials: true,
+}));
 
 app.use("/",authRouter);
 app.use("/",profileRouter);
