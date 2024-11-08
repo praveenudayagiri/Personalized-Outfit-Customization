@@ -1,3 +1,4 @@
+
 const express = require("express");
 const connectDB = require("./config/database");
 const app = express();
@@ -6,22 +7,9 @@ const { userAuth } = require('./middleware/auth');
  const cors = require('cors');
 
 app.use(cors({
-  origin: "https://personalized-outfit-customization-rc6u.vercel.app", // React frontend URL
-  credentials: true,  // Allow cookies and credentials
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  // Allowed HTTP methods
-  allowedHeaders: ["Content-Type", "Authorization"] // Allowed headers
+    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
+    credentials: true,
 }));
-
-
-app.options('*', (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://personalized-outfit-customization-rc6u.vercel.app");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.status(200).end(); // OK status
-});
-
-
 app.use(express.json());
 app.use(cookieParser());
 
@@ -46,7 +34,3 @@ app.get("/", (req, res) => {
 
 module.exports = app;
 connectDB()
-
-
-
-
