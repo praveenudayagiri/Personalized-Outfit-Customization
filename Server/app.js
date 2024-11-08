@@ -6,9 +6,12 @@ const { userAuth } = require('./middleware/auth');
  const cors = require('cors');
 
 app.use(cors({
-    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
-    credentials: true,
+  origin: "https://personalized-outfit-customization-rc6u.vercel.app", // React frontend URL
+  credentials: true,  // Allow cookies and credentials
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  // Allowed HTTP methods
+  allowedHeaders: ["Content-Type", "Authorization"] // Allowed headers
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
