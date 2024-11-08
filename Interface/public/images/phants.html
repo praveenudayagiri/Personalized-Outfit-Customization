@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phant Customization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/phant.css">
+   
+</head>
+
+<body>
+        <section id="header">
+            <div>
+                <div class="img">
+                    <img src="../images/fs-removebg-preview.jpg" width="80px" height="80px" alt="">
+                </div>
+                <div id="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+                <div>
+                    <ul id="nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="contact.html">Customize</a></li>  
+                        <li id="cart">
+                            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <span id="cart-badge">0</span> <!-- Cart item count -->
+                        </li>
+                        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+                    </ul>
+                </div>
+                <div id="sideba" class="sideba">
+                    <div class="sideba-header">
+                        <h2>Panel</h2>
+                        <button class="close-btn" onclick="toggleSidebar()">&#10006;</button>
+                    </div>
+                    <ul>
+                        <li><a href="./profilr.html"><i class="fas fa-users"></i> Profile</a></li>
+                        <li><a href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i>cart</a></li>
+                        <li><a href="./cutomization.html"><i class="fas fa-paint-brush"></i>Customization</a></li>
+                        <li><a href="./about us.html"><i class="fas fa-file-alt"></i>About Us</a></li>
+                        <li><a href="./contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                        <li id="lgo"><a href="./home.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <div class="container">
+
+        <div id="fabric-section" class="selection-section content-section active">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search fabrics by name or property">
+                <button class="filter-button">
+                    <i class="fas fa-sliders-h"></i>
+                </button>
+            </div>
+
+            <div class="item-list">
+                <div class="item" onclick="changeFabric('Dark-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2552_huge_c300.jpg " alt="Poplin White">
+                    <p>Dark Blue</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('navy-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2553_huge_c300.jpg" alt="Poplin Mid Blue">
+                    <p>Navy Blue</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('mid-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2554_huge_c300.jpg" alt="Poplin Cotton Blue">
+                    <p>Mid Blue</p>
+                   
+                </div>
+                <div class="item" onclick="changeFabric('light-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2568_huge_c300.jpg" alt="Poplin Deep Blue">
+                    <p>light Blue</p>
+                   
+                </div>
+                <div class="item" onclick="changeFabric('pure-black')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2564_huge_c300.jpg" alt="Cotton Blue">
+                    <p>Pure Black</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('washed-black')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2566_huge_c300.jpg" alt="Oxford Mid Blue">
+                    <p>Washed Black</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('charcoal')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/3071_huge_c300.jpg" alt="Bengal stripes">
+                    <p>Charcoal</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('all-white')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2544_huge_c300.jpg" alt="Knitted">
+                    <p>All White</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('cream')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/3529_huge_c300.jpg" alt="Lenin cotton">
+                    <p>Cream</p>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="style-section" class="selection-section content-section">
+            <div class="item-list">
+                <div class="item" onclick="changeStyle('Straight')">
+                    <img src="../images/phs-1.png" alt="New-Kint Style">
+                    <p>Straight</p>
+                </div>
+                <div class="item" onclick="changeStyle('slim')">
+                    <img src="../images/phs-2.png" alt="Kent Collar Style">
+                    <p>Slim</p>
+                </div>
+                <div class="item" onclick="changeStyle('skinny')">
+                    <img src="../images/phs-3.png" alt="Button Down Style">
+                    <p>Skinny</p>
+                </div>
+                <div class="item" onclick="changeStyle('bootcut')">
+                    <img src="../images/phs-4.png" alt="Stand-up Style">
+                    <p>Bootcut</p>
+                </div>
+                <div class="item" onclick="changeStyle('classic')">
+                    <img src="../images/phs-5.png" alt="Wing Collar Style">
+                    <p>Classic</p>
+                </div>
+                <div class="item" onclick="changeStyle('rolledup')">
+                    <img src="../images/phs-6.png" alt="Rounded Collar Style">
+                    <p>Rolledup</p>
+                </div>
+                <div class="item" onclick="changeStyle('zipper')">
+                    <img src="../images/phs-7.png" alt="Single Cuff 1 Style">
+                    <p>Zipper</p>
+                </div>
+                <div class="item" onclick="changeStyle('buttons')">
+                    <img src="../images/phs-8.png" alt="Single Cuff 2 Style">
+                    <p>Buttons</p>
+                </div>
+                <div class="item" onclick="changeStyle('class-pocket')">
+                    <img src="../images/phs-9.png" alt="short-hands">
+                    <p>Classic</p>
+                </div>
+                <div class="item" onclick="changeStyle('work-pocket')">
+                    <img src="../images/phs-10.png" alt="no-pocket">
+                    <p>Worker</p>
+                </div>
+                 <div class="item" onclick="changeStyle('unbranded')">
+                    <img src="../images/phs-11.png" alt="pocket">
+                    <p>Unbranded</p>
+                </div>
+                <div class="item" onclick="changeStyle('class')">
+                    <img src="../images/phs-12.png" alt="pocket">
+                    <p>Classic</p>
+                </div>
+                <div class="item" onclick="changeStyle('rounded')">
+                    <img src="../images/phs-13.png" alt="pocket">
+                    <p>Rounded</p>
+                </div>
+                <div class="item" onclick="changeStyle('squared')">
+                    <img src="../images/phs-14.png" alt="pocket">
+                    <p>Squared</p>
+                </div> 
+            </div>
+            
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-item selected" onclick="switchSection('fabric-section')">
+                <i class="fas fa-tshirt"></i> Fabric
+            </div>
+            <div class="sidebar-item" onclick="switchSection('style-section')">
+                <i class="fas fa-paint-brush"></i> Style
+            </div>
+            <div class="sidebar-item"onclick="location.href='ai.html';">
+                Others
+            </div>
+        </div>
+
+        <div class="shirt-preview">
+            <!-- <div class="icon-bar">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-share-alt"></i>
+            </div> -->
+            <img id="shirt-preview-image" src="../images/phant-default.png" alt="phant Preview">
+            <p id="shirt-description">Selected Phant: Default</p>
+            <button class="next-button">Next</button>
+            <p class="order-info">Customize your phant to your liking!</p>
+        </div>
+
+    </div>
+
+    <script src="../js/phant_script.js"> </script>
+    
+</body>
+
+</html>

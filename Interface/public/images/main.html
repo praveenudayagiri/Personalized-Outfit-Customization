@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirt Customization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/c_styles.css">
+   
+</head>
+
+<body>
+        <section id="header">
+            <div>
+                <div class="img">
+                    <img src="../images/fs-removebg-preview.jpg" width="80px" height="80px" alt="">
+                </div>
+                <div id="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+                <div>
+                    <ul id="nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="contact.html">Customize</a></li> 
+                        <li id="cart">
+                            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <span id="cart-badge">0</span> <!-- Cart item count -->
+                        </li>
+                        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+                    </ul>
+                </div>
+                <div id="sideba" class="sideba">
+                    <div class="sideba-header">
+                        <h2>Panel</h2>
+                        <button class="close-btn" onclick="toggleSidebar()">&#10006;</button>
+                    </div>
+                    <ul>
+                        <li><a href="./profilr.html"><i class="fas fa-users"></i> Profile</a></li>
+                        <li><a href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i>cart</a></li>
+                        <li><a href="./cutomization.html"><i class="fas fa-paint-brush"></i>Customization</a></li>
+                        <li><a href="./about us.html"><i class="fas fa-file-alt"></i>About Us</a></li>
+                        <li><a href="./contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                        <li id="lgo"><a href="./home.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <div class="container">
+
+        <div id="fabric-section" class="selection-section content-section active">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search fabrics by name or property">
+                <button class="filter-button">
+                    <i class="fas fa-sliders-h"></i>
+                </button>
+            </div>
+
+            <div class="item-list">
+                <div class="item" onclick="changeFabric('poplin-white')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/699_huge_c300.jpg" alt="Poplin White">
+                    <p>Poplin White</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('poplin-mid-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1725_huge_c300.jpg" alt="Poplin Mid Blue">
+                    <p>Poplin Mid Blue</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('poplin-cotton-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2740_huge_c300.jpg" alt="Poplin Cotton Blue">
+                    <p>Poplin Cotton Blue</p>
+                   
+                </div>
+                <div class="item" onclick="changeFabric('poplin-deep-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2738_huge_c300.jpg" alt="Poplin Deep Blue">
+                    <p>Poplin Deep Blue</p>
+                   
+                </div>
+                <div class="item" onclick="changeFabric('cotton-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2406_huge_c300.jpg" alt="Cotton Blue">
+                    <p>Cotton Blue</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('oxford-mid-blue')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3221_huge_c300.jpg" alt="Oxford Mid Blue">
+                    <p>Oxford Mid Blue</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Bengal-stripes')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1900_huge_c300.jpg" alt="Bengal stripes">
+                    <p>Bengal stripes</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Knitted')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3404_huge_c300.jpg" alt="Knitted">
+                    <p>Knitted</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Lenin-cotton')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3384_huge_c300.jpg" alt="Lenin cotton">
+                    <p>Lenin cotton</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Wrinkle-Free')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2011_huge_c300.jpg" alt="Wrinkle Free">
+                    <p>Wrinkle Free</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Easy-iron')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3468_huge_c300.jpg" alt="Easy iron">
+                    <p>Easy iron</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Creepe')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2260_huge_c300.jpg" alt="Creepe">
+                    <p>Creepe</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Double-stripe')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3048_huge_c300.jpg" alt="Double stripe">
+                    <p>Double stripe</p>
+                    
+                </div>
+                <div class="item" onclick="changeFabric('Micro-pattern')">
+                    <img src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2712_huge_c300.jpg" alt="Micro pattern">
+                    <p>Micro pattern</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="style-section" class="selection-section content-section">
+            <div class="item-list">
+                <div class="item" onclick="changeStyle('New-Kint')">
+                    <img src="../images/k1.png" alt="New-Kint Style">
+                    <p>New-Kint</p>
+                </div>
+                <div class="item" onclick="changeStyle('Kent-Collar')">
+                    <img src="../images/k2.png" alt="Kent Collar Style">
+                    <p>Kent-Collar</p>
+                </div>
+                <div class="item" onclick="changeStyle('button-down')">
+                    <img src="../images/k3.png" alt="Button Down Style">
+                    <p>Button Down</p>
+                </div>
+                <div class="item" onclick="changeStyle('Stand-up')">
+                    <img src="../images/k5.png" alt="Stand-up Style">
+                    <p>Stand-up</p>
+                </div>
+                <div class="item" onclick="changeStyle('wing-collar')">
+                    <img src="../images/k4.png" alt="Wing Collar Style">
+                    <p>Wing-collar</p>
+                </div>
+                <div class="item" onclick="changeStyle('Rounded-collar')">
+                    <img src="../images/k6.png" alt="Rounded Collar Style">
+                    <p>Rounded-collar</p>
+                </div>
+                <div class="item" onclick="changeStyle('single cuff-1')">
+                    <img src="../images/k7.png" alt="Single Cuff 1 Style">
+                    <p>Single Cuff 1</p>
+                </div>
+                <div class="item" onclick="changeStyle('single cuff-2')">
+                    <img src="../images/k8.png" alt="Single Cuff 2 Style">
+                    <p>Single Cuff 2</p>
+                </div>
+                <div class="item" onclick="changeStyle('short-hands')">
+                    <img src="../images/k12.png" alt="short-hands">
+                    <p>Half sleeves</p>
+                </div>
+                <div class="item" onclick="changeStyle('no-pocket')">
+                    <img src="../images/k11.png" alt="no-pocket">
+                    <p>no-pocket</p>
+                </div>
+                <div class="item" onclick="changeStyle('pocket')">
+                    <img src="../images/k10.png" alt="pocket">
+                    <p>pocket</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="sidebar-item selected" onclick="switchSection('fabric-section')">
+                <i class="fas fa-tshirt"></i> Fabric
+            </div>
+            <div class="sidebar-item" onclick="switchSection('style-section')">
+                <i class="fas fa-paint-brush"></i> Style
+            </div>
+            <div class="sidebar-item"onclick="location.href='ai.html';">
+                Others
+            </div>
+        </div>
+
+        <div class="shirt-preview">
+            <!-- <div class="icon-bar">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-share-alt"></i>
+            </div> -->
+            <img id="shirt-preview-image" src="../images/default.png" alt="Shirt Preview">
+            <p id="shirt-description">Selected Shirt: Default</p>
+            <button class="next-button">Add to cart</button>
+            <p class="order-info">Customize your shirt to your liking!</p>
+        </div>
+
+    </div>
+
+    <script src="../js/shirts_scripts.js"> </script>
+</body>
+
+</html>

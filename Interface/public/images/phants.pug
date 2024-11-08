@@ -1,0 +1,146 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Phant Customization
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet" href="/css/phant.css")
+   
+  body
+    section#header
+      div
+        .img
+          img(src="/images/fs-removebg-preview.jpg", width="80px", height="80px", alt="")
+        div
+          ul#nav
+            li
+              a(href="home.html") Home
+            li
+              a(href="contact.html") Customize
+            li#cart
+              a(href="cart.html")
+                i.fa-solid.fa-cart-shopping
+              span#cart-badge 0 <!-- Cart item count -->
+            button.open-btn(onclick="toggleSidebar()") ☰
+        #sideba.sideba
+          .sideba-header
+            h2 Panel
+            button.close-btn(onclick="toggleSidebar()") &#10006;
+          ul
+            li
+              a(href="./profilr.html")
+                i.fas.fa-users Profile
+            li
+              a(href="/")
+                i.fas.fa-home Home
+            li
+              a(href="./cart.html")
+                i.fas.fa-shopping-cart cart
+            li
+              a(href="/cutomization")
+                i.fas.fa-paint-brush Customization
+            li
+              a(href="./about us.html")
+                i.fas.fa-file-alt About Us
+            li
+              a(href="./contact.html")
+                i.fas.fa-envelope Contact
+            li#lgo
+              a(href="./home.html")
+                i.fas.fa-sign-out-alt Logout
+
+    .container
+      #fabric-section.selection-section.content-section.active
+        .search-container
+          input.search-bar(type="text", placeholder="Search fabrics by name or property")
+          button.filter-button
+            i.fas.fa-sliders-h
+        .item-list
+          .item(onclick="changeFabric('Dark-blue')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2552_huge_c300.jpg", alt="Poplin White")
+            p Dark Blue
+          .item(onclick="changeFabric('navy-blue')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2553_huge_c300.jpg", alt="Poplin Mid Blue")
+            p Navy Blue
+          .item(onclick="changeFabric('mid-blue')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2554_huge_c300.jpg", alt="Poplin Cotton Blue")
+            p Mid Blue
+          .item(onclick="changeFabric('light-blue')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2568_huge_c300.jpg", alt="Poplin Deep Blue")
+            p Light Blue
+          .item(onclick="changeFabric('pure-black')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2564_huge_c300.jpg", alt="Cotton Blue")
+            p Pure Black
+          .item(onclick="changeFabric('washed-black')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2566_huge_c300.jpg", alt="Oxford Mid Blue")
+            p Washed Black
+          .item(onclick="changeFabric('charcoal')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/3071_huge_c300.jpg", alt="Bengal stripes")
+            p Charcoal
+          .item(onclick="changeFabric('all-white')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/2544_huge_c300.jpg", alt="Knitted")
+            p All White
+          .item(onclick="changeFabric('cream')")
+            img(src="https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/jeans/3529_huge_c300.jpg", alt="Lenin cotton")
+            p Cream
+
+      #style-section.selection-section.content-section
+        .item-list
+          .item(onclick="changeStyle('Straight')")
+            img(src="/images/phs-1.png", alt="New-Kint Style")
+            p Straight
+          .item(onclick="changeStyle('slim')")
+            img(src="/images/phs-2.png", alt="Kent Collar Style")
+            p Slim
+          .item(onclick="changeStyle('skinny')")
+            img(src="/images/phs-3.png", alt="Button Down Style")
+            p Skinny
+          .item(onclick="changeStyle('bootcut')")
+            img(src="/images/phs-4.png", alt="Stand-up Style")
+            p Bootcut
+          .item(onclick="changeStyle('classic')")
+            img(src="/images/phs-5.png", alt="Wing Collar Style")
+            p Classic
+          .item(onclick="changeStyle('rolledup')")
+            img(src="/images/phs-6.png", alt="Rounded Collar Style")
+            p Rolledup
+          .item(onclick="changeStyle('zipper')")
+            img(src="/images/phs-7.png", alt="Single Cuff 1 Style")
+            p Zipper
+          .item(onclick="changeStyle('buttons')")
+            img(src="/images/phs-8.png", alt="Single Cuff 2 Style")
+            p Buttons
+          .item(onclick="changeStyle('class-pocket')")
+            img(src="/images/phs-9.png", alt="short-hands")
+            p Classic
+          .item(onclick="changeStyle('work-pocket')")
+            img(src="/images/phs-10.png", alt="no-pocket")
+            p Worker
+          .item(onclick="changeStyle('unbranded')")
+            img(src="/images/phs-11.png", alt="pocket")
+            p Unbranded
+          .item(onclick="changeStyle('class')")
+            img(src="/images/phs-12.png", alt="pocket")
+            p Classic
+          .item(onclick="changeStyle('rounded')")
+            img(src="/images/phs-13.png", alt="pocket")
+            p Rounded
+          .item(onclick="changeStyle('squared')")
+            img(src="/images/phs-14.png", alt="pocket")
+            p Squared 
+
+      .sidebar
+        .sidebar-item.selected(onclick="switchSection('fabric-section')")
+          i.fas.fa-tshirt Fabric
+        .sidebar-item(onclick="switchSection('style-section')")
+          i.fas.fa-paint-brush Style
+        .sidebar-item(onclick="location.href='ai.html';") Others
+
+      .shirt-preview
+        img#shirt-preview-image(src="/images/phant-default.png", alt="phant Preview")
+        p#shirt-description Selected Phant: Default
+        button.next-button Next
+        p.order-info Customize your phant to your liking!
+
+    script(src="/js/phant_script.js")
