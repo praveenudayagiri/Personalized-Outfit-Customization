@@ -26,6 +26,11 @@ app.use("/",requestRouter);
 app.use("/",productRouter);
 app.use("/",cartRouter);
 
+app.get("/", (req, res) => {
+    res.send("<h1>HI</h1>");
+});
+
+
 module.exports = app;
 connectDB()
 
