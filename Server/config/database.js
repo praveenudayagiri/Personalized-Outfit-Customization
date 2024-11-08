@@ -1,9 +1,16 @@
 const mongoose = require("mongoose");
 
-const connectDB = async() => {
-    await mongoose.connect(
-        "mongodb+srv://praveenudayagiri724:np5hdBsNAtO4lIlD@cluster0.lvusg.mongodb.net/praveendb?retryWrites=true&w=majority&appName=Cluster0"
+const connectDB = () => {
+     
+    mongoose.connect(
+    "mongodb+srv://praveenudayagiri724:np5hdBsNAtO4lIlD@cluster0.lvusg.mongodb.net/praveendb?retryWrites=true&w=majority&appName=Cluster0"
+)
+.then(() => {
+    console.log('MongoDB connected successfully');
+})
+.catch(err => {
+    console.error('Error connecting to MongoDB:', err);
+});
 
-    );
 };
 module.exports = connectDB;
