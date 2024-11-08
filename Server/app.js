@@ -18,9 +18,7 @@ const requestRouter = require("./routes/requests");
 const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 
-app.use("/", (req, res)=>{
- res.send("<h1>HI</h1>")
-})
+
 
 app.use("/",authRouter);
 app.use("/",profileRouter);
