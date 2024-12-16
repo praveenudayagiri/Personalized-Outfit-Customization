@@ -17,7 +17,7 @@ const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 
 app.use(cors({
-    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
+    origin: "https://personalized-outfit-customization-1.onrender.com",
     credentials: true,
 }));
 
