@@ -33,7 +33,7 @@ const Body = () => {
   
     fetchUser();
     
-  }, [fetchUser]);
+  }, []);
 
   return (
     <>
