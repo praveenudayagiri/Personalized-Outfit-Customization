@@ -33,10 +33,7 @@ app.get("/", (req, res) => {
 
 
 module.exports = app;
-connectDB()
-.then(() =>{
-    console.log("Database connection established...");
-    app.listen(9000,()  => {
+connectDB();
+ app.listen(9000,()  => {
         console.log("server is sucessfully listening on port 9000....");
     });
-}) 
