@@ -1,4 +1,3 @@
-
 const express = require("express");
 const connectDB = require("./config/database");
 const app = express();
@@ -17,7 +16,7 @@ const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 
 app.use(cors({
-    origin: "https://personalized-outfit-customization-1.onrender.com",
+    origin: "https://personalized-outfit-customization-rc6u.vercel.app",
     credentials: true,
 }));
 
@@ -34,6 +33,3 @@ app.get("/", (req, res) => {
 
 module.exports = app;
 connectDB();
- app.listen(9000,()  => {
-        console.log("server is sucessfully listening on port 9000....");
-    });
