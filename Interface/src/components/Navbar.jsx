@@ -31,7 +31,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="logo-container">
         <img src="images/fs-removebg-preview.jpg" alt="Logo" className="logo" />
-        <span className="owner-text">Owned by Praveen</span>
+        <span className="owner-text">Owned by PRAVEEN UDAYAGIRI</span>
       </div>
 
       {/* Signup Button for Unauthenticated Users */}
