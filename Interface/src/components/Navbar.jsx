@@ -15,7 +15,7 @@ const Navbar = () => {
     try {
       // Call the backend to expire the token
       await axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
-      
+
       // Remove user from Redux store (if you want to reset the user state)
       dispatch(removeUser());
 
@@ -31,26 +31,23 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="logo-container">
         <img src="images/fs-removebg-preview.jpg" alt="Logo" className="logo" />
+        <span className="owner-text">Owned by Praveen</span>
       </div>
 
-      { !user && (  <div className="links-container">
+      {/* Signup Button for Unauthenticated Users */}
+      {!user && (
+        <div className="links-container">
           <ul>
-          <li>
-  <button onClick={() => navigate('/signup')} className="nav-link signup-button">Signup</button>
-</li>
-
+            <li>
+              <button onClick={() => navigate('/signup')} className="nav-link signup-button">
+                Signup
+              </button>
+            </li>
           </ul>
         </div>
+      )}
 
-     )}
-
-
-
-
-
-
-
-      {/* Links Section */}
+      {/* Links Section for Authenticated Users */}
       {user && (
         <div className="links-container">
           <ul className="nav-links">
